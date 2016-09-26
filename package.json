@@ -1,0 +1,53 @@
+{
+  "name": "win-lnk",
+  "version": "0.0.0",
+  "description": "Manage windows shortcuts (.lnk)",
+  "main": "index.js",
+  "scripts": {
+    "start": "ava --watch",
+    "coverage": "xo && nyc --reporter=lcov ava",
+    "test": "xo && ava --verbose",
+    "prepublish": "xo && ava",
+    "doc": "jsdoc index.js lib -r README.md -d doc"
+  },
+  "keywords": [
+    "windows",
+    "shortcut",
+    "shortcuts",
+    "lnk",
+    "link"
+  ],
+  "author": "Ishi Ruy <dev@nhz.io>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ironSource/win-lnk.git"
+  },
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "jsdoc": "^3.4.1",
+    "xo": "^0.16.0"
+  },
+  "xo": {
+    "space": 4,
+    "semicolon": false,
+    "rules": {
+      "comma-dangle": [
+        1,
+        "always-multiline"
+      ],
+      "no-unused-vars": [
+        1
+      ]
+    }
+  },
+  "bugs": {
+    "url": "https://github.com/ironSource/win-lnk/issues"
+  },
+  "homepage": "https://github.com/ironSource/win-lnk#readme",
+  "dependencies": {
+    "ava": "^0.16.0",
+    "jsdoc": "^3.4.1",
+    "xo": "^0.16.0"
+  }
+}

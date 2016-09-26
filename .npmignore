@@ -1,0 +1,12 @@
+node_modules
+*.log
+coverage
+.nyc_output
+doc
+tmp
+*.swp
+.editorconfig
+.gitignore
+.npmignore
+.tern-project
+.nycrc
