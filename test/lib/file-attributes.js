@@ -109,3 +109,5 @@ test('fileAttributes.from', t => {
     t.true(FileAttributes.from(['a', 'b', 'c']) instanceof FileAttributes)
     t.true(FileAttributes.from(Buffer.from([0, 0, 0, 0])) instanceof FileAttributes)
 })
+
+/** @TODO: Add exception tests for full coverage */
