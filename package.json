@@ -12,6 +12,7 @@
     "prepublish": "xo && ava",
     "doc": "jsdoc index.js lib -r README.md -d doc"
   },
+  "pre-push": "test",
   "keywords": [
     "windows",
     "shortcut",
@@ -29,6 +30,7 @@
     "ava": "^0.16.0",
     "jsdoc": "^3.4.1",
     "open": "0.0.5",
+    "pre-push": "^0.1.1",
     "xo": "^0.16.0"
   },
   "xo": {
