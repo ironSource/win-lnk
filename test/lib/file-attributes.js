@@ -103,3 +103,9 @@ test('fileAttributes.toBuffer', t => {
     const fileAttributes = FileAttributes.fromString('abcdefghijklmno')
     t.deepEqual(fileAttributes.toBuffer(), Buffer.from([0xB7, 0x7F, 0, 0]))
 })
+
+test('fileAttributes.from', t => {
+    t.true(FileAttributes.from('abc') instanceof FileAttributes)
+    t.true(FileAttributes.from(['a', 'b', 'c']) instanceof FileAttributes)
+    t.true(FileAttributes.from(Buffer.from([0, 0, 0, 0])) instanceof FileAttributes)
+})
