@@ -4,7 +4,7 @@
   "description": "Manage windows shortcuts (.lnk)",
   "main": "index.js",
   "scripts": {
-    "start": "ava --watch",
+    "start": "ava --watch --verbose",
     "coverage": "xo && nyc --reporter=lcov ava",
     "test": "xo && ava --verbose",
     "prepublish": "xo && ava",
