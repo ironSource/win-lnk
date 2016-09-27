@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "ava --watch --verbose",
-    "coverage": "xo && nyc --reporter=lcov ava",
+    "nyc": "xo && nyc --reporter=lcov ava",
+    "report": "node -e \"require('open')('./coverage/lcov-report/index.html')\"",
+    "coverage": "npm run nyc && npm run report ",
     "test": "xo && ava --verbose",
     "prepublish": "xo && ava",
     "doc": "jsdoc index.js lib -r README.md -d doc"
@@ -26,11 +28,16 @@
   "devDependencies": {
     "ava": "^0.16.0",
     "jsdoc": "^3.4.1",
+    "open": "0.0.5",
     "xo": "^0.16.0"
   },
   "xo": {
     "space": 4,
     "semicolon": false,
+    "ignores": [
+      "doc/**",
+      "coverage/**"
+    ],
     "rules": {
       "comma-dangle": [
         1,
