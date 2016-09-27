@@ -10,7 +10,9 @@
     "coverage": "npm run nyc && npm run report ",
     "test": "xo && ava --verbose",
     "prepublish": "xo && ava",
-    "doc": "jsdoc index.js lib -r README.md -d doc"
+    "jsdoc": "jsdoc index.js lib -r README.md -d doc",
+    "viewdoc": "node -e \"require('open')('./doc/index.html')\"",
+    "doc": "npm run jsdoc && npm run viewdoc"
   },
   "pre-push": "test",
   "keywords": [
